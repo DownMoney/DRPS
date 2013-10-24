@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item Regex="taught by ((\w|\s)+)">
+    <SQL>SELECT PID FROM People WHERE Name='#';</SQL>
+    <Fields>
+      <Field Quotation="False" Strict="False" Substitution="">Organizer</Field>
+    </Fields>
+  </Item>
+  <Item Regex="worth credits (\d+)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="False" Strict="False" Substitution="">Credits</Field>
+    </Fields>
+  </Item>
+  <Item Regex="done by the ((\w|\s)+)">
+    <SQL>SELECT SID FROM Schools WHERE Name LIKE '%#%';</SQL>
+    <Fields>
+      <Field Quotation="False" Strict="False" Substitution="">SID</Field>
+    </Fields>
+  </Item>  
+  <Item Regex="managed by ((\w|\s)+)">
+    <SQL>SELECT PID FROM People WHERE Name='#';</SQL>
+    <Fields>
+      <Field Quotation="False" Strict="False" Substitution="">Secretary</Field>
+    </Fields>
+  </Item>
+  <Item Regex="are about ((\w|\s)+)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="">Description</Field>
+      <Field Quotation="True" Strict="False" Substitution="">AcademicDesc</Field>
+      <Field Quotation="True" Strict="False" Substitution="">Name</Field>
+      <Field Quotation="True" Strict="False" Substitution="">HomeSubjectArea</Field>
+      <Field Quotation="True" Strict="False" Substitution="">LearningOutcomes</Field>
+      <Field Quotation="True" Strict="False" Substitution="">OtherSubjectArea</Field>
+      <Field Quotation="True" Strict="False" Substitution="">Syllabus</Field>
+      <Field Quotation="True" Strict="False" Substitution="">TransSkills</Field>
+    </Fields>
+  </Item>
+  <Item Regex="(no|none) additional fees">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="">AdditionalCosts</Field>
+    </Fields>
+  </Item>
+  <Item Regex="(no|none) other requiments">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="">OtherRequiments</Field>
+    </Fields>
+  </Item>
+  <Item Regex="(no|none) reading list">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="Not entered">ReadingList</Field>
+    </Fields>
+  </Item>
+  <Item Regex="learn enabled">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="False" Strict="False" Substitution="1">Learn</Field>
+    </Fields>
+  </Item>
+  <Item Regex="(no quota|no space limit)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="False" Strict="False" Substitution="-1">Quota</Field>
+    </Fields>
+  </Item>
+  <Item Regex="suitable for ((\w|\s|\d)+)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="">CreditLevel</Field>
+    </Fields>
+  </Item>
+  <Item Regex="((not )*available to (\w|\s)+)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="True" Substitution="">Availability</Field>
+    </Fields>
+  </Item>
+  <Item Regex="run in (semester \d\w*)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="">Period</Field>
+    </Fields>
+  </Item>
+  <Item Regex="whole year">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="Full Year">Period</Field>
+    </Fields>
+  </Item>
+  <Item Regex="are (flexible|lifelong|lifelong learning)">
+    <SQL></SQL>
+    <Fields>
+      <Field Quotation="True" Strict="False" Substitution="">Period</Field>
+    </Fields>
+  </Item>
+</Items>

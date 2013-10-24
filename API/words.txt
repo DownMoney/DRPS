@@ -1,0 +1,18 @@
+taught by <People>
+worth credits <Number>
+done by the <Schools>
+managed by <People>
+are about <Free>
+no additional fees
+no other requiments
+no reading list
+learn enabled
+suitable for <Year>
+available to <Students>
+not available to <Students>
+no quota
+no space limit
+run in <Semester>
+run whole year
+are flexible
+are lifelong learning
